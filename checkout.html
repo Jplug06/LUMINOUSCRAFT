@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - LuminousCraft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-lightbulb"></i>
+                        LuminousCraft
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-header">
+                <h1>Checkout</h1>
+                <div class="checkout-steps">
+                    <div class="step active">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Order Details</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Payment</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Confirmation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-content">
+                <!-- Order Form -->
+                <div class="checkout-form">
+                    <form id="checkoutForm">
+                        <div class="form-section">
+                            <h2>Customer Information</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Delivery Information</h2>
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="region">Region *</label>
+                                    <select id="region" name="region" required>
+                                        <option value="">Select Region</option>
+                                        <option value="greater-accra">Greater Accra</option>
+                                        <option value="ashanti">Ashanti</option>
+                                        <option value="western">Western</option>
+                                        <option value="central">Central</option>
+                                        <option value="eastern">Eastern</option>
+                                        <option value="volta">Volta</option>
+                                        <option value="northern">Northern</option>
+                                        <option value="upper-east">Upper East</option>
+                                        <option value="upper-west">Upper West</option>
+                                        <option value="brong-ahafo">Brong Ahafo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryTime">Preferred Delivery Time</label>
+                                <select id="deliveryTime" name="deliveryTime">
+                                    <option value="morning">Morning (8AM - 12PM)</option>
+                                    <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                                    <option value="evening">Evening (5PM - 8PM)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Payment Method</h2>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="cash" checked>
+                                    <span class="payment-label">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Cash on Delivery
+                                    </span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="momo">
+                                    <span class="payment-label">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        Mobile Money
+                                    </span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="bank">
+                                    <span class="payment-label">
+                                        <i class="fas fa-university"></i>
+                                        Bank Transfer
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Additional Notes</h2>
+                            <div class="form-group">
+                                <label for="notes">Special Instructions (Optional)</label>
+                                <textarea id="notes" name="notes" rows="4" placeholder="Any special delivery instructions or notes..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="place-order-btn">
+                            <i class="fas fa-check"></i>
+                            Place Order
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Enhanced Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    
+                    <!-- Cart Items Count -->
+                    <div class="order-header">
+                        <span class="items-count" id="itemsCount">0 items in your cart</span>
+                        <button class="edit-cart-btn" onclick="window.location.href='products.html'">
+                            <i class="fas fa-edit"></i> Edit Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Detailed Order Items -->
+                    <div class="order-items-detailed" id="orderItemsDetailed">
+                        <!-- Detailed order items will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Order Calculations -->
+                    <div class="order-calculations">
+                        <div class="calculation-row">
+                            <span>Items (<span id="totalItemsCount">0</span>):</span>
+                            <span id="orderSubtotal">₵0.00</span>
+                        </div>
+                        <div class="calculation-row">
+                            <span>Delivery Fee:</span>
+                            <span id="deliveryFee">₵25.00</span>
+                        </div>
+                        <div class="calculation-row discount-row" id="discountRow" style="display: none;">
+                            <span>Discount:</span>
+                            <span id="discountAmount">-₵0.00</span>
+                        </div>
+                        <div class="calculation-row total-row">
+                            <span><strong>Order Total:</strong></span>
+                            <span id="orderTotal"><strong>₵0.00</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Promo Code Section -->
+                    <div class="promo-code-section">
+                        <div class="promo-input-group">
+                            <input type="text" id="promoCode" placeholder="Enter promo code">
+                            <button type="button" id="applyPromoBtn" onclick="applyPromoCode()">Apply</button>
+                        </div>
+                        <div class="promo-message" id="promoMessage"></div>
+                    </div>
+
+                    <!-- Delivery Info -->
+                    <div class="delivery-info">
+                        <div class="delivery-item">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Free delivery</strong> on orders over ₵1,000
+                            </div>
+                        </div>
+                        <div class="delivery-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>Secure checkout</strong> - Your information is protected
+                            </div>
+                        </div>
+                        <div class="delivery-item">
+                            <i class="fas fa-undo"></i>
+                            <div>
+                                <strong>30-day return policy</strong> - Easy returns and exchanges
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-check-circle"></i> Order Confirmed!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your order! We have received your order and will contact you shortly to confirm the delivery details.</p>
+                <div class="order-details">
+                    <p><strong>Order Number:</strong> <span id="orderNumber"></span></p>
+                    <p><strong>Total Amount:</strong> <span id="confirmationTotal"></span></p>
+                    <p><strong>Payment Method:</strong> <span id="confirmationPayment"></span></p>
+                    <p><strong>Estimated Delivery:</strong> <span id="estimatedDelivery"></span></p>
+                </div>
+                <div class="order-items-summary" id="orderItemsSummary">
+                    <!-- Order items summary will be populated -->
+                </div>
+                <p>You will receive a confirmation email shortly with all the order details.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="window.location.href='../index.html'">Continue Shopping</button>
+                <button class="btn-secondary" onclick="printOrderDetails()">Print Receipt</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LuminousCraft</h3>
+                    <p>Premium lighting solutions for modern living.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +233 123 456 789</p>
+                    <p><i class="fas fa-envelope"></i> info@luminouscraft.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuminousCraft. All rights reserved. <li><a href="dashboard.html">ADMIN</a></li></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="checkout.js"></script>
+</body>
+</html>

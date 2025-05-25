@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - LuminousCraft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-lightbulb"></i>
+                        LuminousCraft
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="cart-icon" aria-label="Shopping Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h1>Our Products</h1>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="table">Table Lamps</button>
+                <button class="filter-btn" data-filter="floor">Floor Lamps</button>
+                <button class="filter-btn" data-filter="pendant">Pendant Lights</button>
+                <button class="filter-btn" data-filter="chandelier">Chandeliers</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <div class="product-card" data-category="table">
+                    <img src="PIC1.jpg" alt="Vintage Table Lamp">
+                    <div class="product-info">
+                        <h3>Vintage Table Lamp</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(24 reviews)</span>
+                        </div>
+                        <div class="product-price">₵279.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":1,"name":"Vintage Table Lamp","price":450,"image":"PIC1.jpg"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="floor">
+                    <img src="PIC2.jpg" alt="Modern Floor Lamp">
+                    <div class="product-info">
+                        <h3>Modern Floor Lamp</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(18 reviews)</span>
+                        </div>
+                        <div class="product-price">₵680.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":2,"name":"Modern Floor Lamp","price":680,"image":"PIC2.jpg"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pendant">
+                    <img src="PIC3.jpg" alt="Rustic Pendant Light">
+                    <div class="product-info">
+                        <h3>Rustic Pendant Light</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(31 reviews)</span>
+                        </div>
+                        <div class="product-price">₵320.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":3,"name":"Rustic Pendant Light","price":320,"image":"PIC3.jpg"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="chandelier">
+                    <img src="PIC4.jpg" alt="Crystal Chandelier">
+                    <div class="product-info">
+                        <h3>Crystal Chandelier</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(42 reviews)</span>
+                        </div>
+                        <div class="product-price">₵1,250.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":4,"name":"Crystal Chandelier","price":1250,"image":"PIC4.jpg"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="wall">
+                    <img src="PIC5.jpg" alt="Industrial Wall Sconce">
+                    <div class="product-info">
+                        <h3>Industrial Wall Sconce</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(15 reviews)</span>
+                        </div>
+                        <div class="product-price">₵280.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":5,"name":"Industrial Wall Sconce","price":280,"image":"PIC5.jpg"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="table">
+                    <img src="PIC6.jpg" alt="Art Deco Table Lamp">
+                    <div class="product-info">
+                        <h3>Art Deco Table Lamp</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(28 reviews)</span>
+                        </div>
+                        <div class="product-price">₵520.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":6,"name":"Art Deco Table Lamp","price":520,"image":"PIC6.jpg"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LuminousCraft</h3>
+                    <p>Premium lighting solutions for modern living.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +233 20 231 5897</p>
+                    <p><i class="fas fa-envelope"></i> info@luminouscraft.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuminousCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" aria-label="Close Cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be populated by JavaScript -->
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: ₵<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

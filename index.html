@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminousCraft - Premium Lighting Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-lightbulb"></i>
+                        LuminousCraft
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="cart-icon" aria-label="Shopping Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Illuminate Your Space</h1>
+            <p>Discover our premium collection of handcrafted lighting solutions that transform any space into a masterpiece.</p>
+            <a href="products.html" class="cta-button">Shop Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="/placeholder.svg?height=500&width=600" alt="Premium Lighting Collection">
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=250&width=250" alt="Vintage Table Lamp">
+                    <div class="product-info">
+                        <h3>Vintage Table Lamp</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(24 reviews)</span>
+                        </div>
+                        <div class="product-price">₵450.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":1,"name":"Vintage Table Lamp","price":450,"image":"/placeholder.svg?height=250&width=250"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=250&width=250" alt="Modern Floor Lamp">
+                    <div class="product-info">
+                        <h3>Modern Floor Lamp</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(18 reviews)</span>
+                        </div>
+                        <div class="product-price">₵680.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":2,"name":"Modern Floor Lamp","price":680,"image":"/placeholder.svg?height=250&width=250"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=250&width=250" alt="Crystal Chandelier">
+                    <div class="product-info">
+                        <h3>Crystal Chandelier</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(42 reviews)</span>
+                        </div>
+                        <div class="product-price">₵1,250.00</div>
+                        <button class="add-to-cart-btn" data-product='{"id":4,"name":"Crystal Chandelier","price":1250,"image":"/placeholder.svg?height=250&width=250"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest lighting trends and exclusive offers.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LuminousCraft</h3>
+                    <p>Premium lighting solutions for modern living.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +233 20 231 5897</p>
+                    <p><i class="fas fa-envelope"></i> info@luminouscraft.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuminousCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" aria-label="Close Cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be populated by JavaScript -->
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: ₵<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Scripts -->
+     <script src="checkout.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
